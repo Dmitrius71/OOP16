@@ -11,15 +11,15 @@ template<class T>
 struct Node 
 {
 	T value;
-	Node* next;
-	Node* prev;
+	Node<T>* next;
+	Node<T>* prev;
 };
 
 template <class T>
 class List
 {
-	Node* head;
-	Node* tail;
+	Node<T>* head;
+	Node<T>* tail;
 	int length;
 public:
 	List()
