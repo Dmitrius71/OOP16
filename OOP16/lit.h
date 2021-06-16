@@ -30,7 +30,15 @@ public:
 
 	~List()
 	{
+		List<T>* current{ head };
 
+		for (int i = 0; i < length; i++)
+		{
+			current = head->next;
+			delete head;
+			head = current;
+		}
+	
 	}
 
 	int Length()
